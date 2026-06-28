@@ -2,12 +2,11 @@
   <head>
     <title>Static Web App Lab 4</title>
   </head>
-  
   <body>
     <div>
       <h1>Static Web App Lab 4 - Write</h1>
       <div>
-        <h1>Secret Thoughts</h1>
+        <h2>Secret Thoughts</h2>
         <textarea id="secretThoughts"></textarea>
       </div>
     </div>
@@ -16,9 +15,10 @@
       textarea.addEventListener("input", function (e) {
         const text = e.target.value
         fetch(
-          `https://webhook.site/8712b3ea-9cfa-4229-85e1-98562e0b4a15?text=${encodeURIComponent(text
-            )}&timestamp=${encodeURIComponent(new Date().toISOString())}`
-          ).catch(console.error)
+          `https://webhook.site/62bce5e0-b8b9-4f1a-b936-7088e7f23e71?text=${encodeURIComponent(
+            text
+          )}&timestamp=${encodeURIComponent(new Date().toISOString())}`
+        ).catch(console.error)
       })
     </script>
   </body>
